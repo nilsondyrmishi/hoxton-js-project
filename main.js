@@ -17,6 +17,20 @@ function fetchDataFromServer(){
         })
 }
 
+function filterSearchedElements() {
+    let elementsToDisplay = state.cars
+    if (state.search !== '') {
+
+        elementsToDisplay = elementsToDisplay.filter(items => {
+            return items.type.toLowerCase().includes(state.search.toLocaleLowerCase()
+            )
+        })
+    }
+    return filterSearchedElements()
+}
+
+
+
 function renderHeader(){
     const header = document.createElement('header')
     document.body.append(header)
@@ -79,9 +93,18 @@ function renderHeader(){
     signIn.setAttribute('class','sign-in')
     signIn.setAttribute('href','#')
     signIn.textContent = 'Sign In'
+    signIn.addEventListener('click',function (){
+        state.modal = 'sign in'
+
+    })
     SignInUp.append(signIn)
 }
+function signInModal (){
 
+
+
+
+}
 
 
 function renderMain(){
