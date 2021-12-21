@@ -1,0 +1,43 @@
+{
+  "data": [
+    {
+      "type": "BMW",
+      "year": "2018",
+      "price": "50$/day",
+      "available": true,
+      "place": "Durres",
+      "description": "Great car for people who love speed"
+    },
+    {
+      "type": "BMW",
+      "year": "2018",
+      "price": "50$/day",
+      "available": true,
+      "place": "Durres",
+      "description": "Great car for people who love speed"
+    },
+    {
+      "type": "MERCEDES",
+      "year": "2018",
+      "price": "50$/day",
+      "available": true,
+      "place": "Tirane",
+      "description": "Great car for people who love speed"
+    },
+    {
+      "type": "OPEL",
+      "year": "2018",
+      "price": "50$/day",
+      "available": true,
+      "place": "Prishtine",
+      "description": "Great car for people who love speed"
+    },  {
+      "type": "FORD",
+      "year": "2018",
+      "price": "50$/day",
+      "available": false,
+      "place": "Durres",
+      "description": "Great car for people who love speed"
+    }
+  ]
+}
