@@ -109,6 +109,67 @@ function signInModal (){
 
 function renderMain(){
 
+const mainSection = document.createElement('section')
+    mainSection.setAttribute('class','home')
+    mainSection.setAttribute('id','home')
+    document.body.append(mainSection)
+
+    const textEl = document.createElement('div')
+    textEl.setAttribute('class','text')
+    mainSection.append(textEl)
+
+    const h1Text = document.createElement('h1')
+    h1Text.textContent = 'Looking to rent a car'
+    // const spanH1 = document.createElement('span')
+    // spanH1.textContent = 'Looking'
+    textEl.append(h1Text)
+    // h1Text.append(spanH1)
+
+
+    const formContainer = document.createElement('div')
+    formContainer.setAttribute('class','form-container')
+
+    mainSection.append(formContainer)
+
+    const Form = document.createElement('from')
+    formContainer.append(Form)
+
+    const inputBoxLoc = document.createElement('div')
+    inputBoxLoc.setAttribute('class','input-box')
+
+    Form.append(inputBoxLoc)
+
+    const spanForm = document.createElement('span')
+    spanForm.textContent = 'Location'
+
+    const inputForm = document.createElement('input')
+    inputForm.setAttribute('type','search')
+    inputForm.setAttribute('placeholder','Search Places')
+
+    inputBoxLoc.append(inputForm,spanForm)
+
+    const inputBoxPick = document.createElement('div')
+    inputBoxPick.setAttribute('class','input-box')
+
+    const spanFormPick = document.createElement('span')
+    spanFormPick.textContent = 'Pick-Up Date'
+
+    const inputFormPick = document.createElement('input')
+    inputFormPick.setAttribute('type','date')
+
+    Form.append(inputBoxPick)
+    inputBoxPick.append(spanFormPick,inputFormPick)
+
+    const inputBoxReturn = document.createElement('div')
+    inputBoxReturn.setAttribute('class','input-box')
+    Form.append(inputBoxReturn)
+
+    const returnSpan = document.createElement('span')
+    returnSpan.textContent = 'Return Date'
+    const inputReturn = document.createElement('input')
+    inputReturn.setAttribute('type','date')
+
+    inputBoxReturn.append(returnSpan,inputReturn)
 }
 
 
