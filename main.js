@@ -1,13 +1,13 @@
 
 const state = {
+    description:'',
     places:'',
-    cars: '',
+    cars:[],
     user: null,
     pages: [],
     selectedPage: '',
     modal: '',
     search: '',
-    selectedItem: null
 }
 
 function fetchDataFromServer(){
@@ -17,18 +17,19 @@ function fetchDataFromServer(){
         })
 }
 
-function filterSearchedElements() {
-    let elementsToDisplay = state.cars
-    if (state.search !== '') {
 
-        elementsToDisplay = elementsToDisplay.filter(items => {
-            return items.type.toLowerCase().includes(state.search.toLocaleLowerCase()
-            )
-        })
-    }
-    return filterSearchedElements()
+
+function getCarsFromServer (){
+
 }
 
+/*
+* Scroll down when the users hits submit
+* fetching all the cars
+* Store the data in state
+* Rendering the data
+*
+* */
 
 
 function renderHeader(){
@@ -146,7 +147,7 @@ const mainSection = document.createElement('section')
     inputForm.setAttribute('type','search')
     inputForm.setAttribute('placeholder','Search Places')
 
-    inputBoxLoc.append(inputForm,spanForm)
+    inputBoxLoc.append(spanForm,inputForm)
 
     const inputBoxPick = document.createElement('div')
     inputBoxPick.setAttribute('class','input-box')
@@ -170,6 +171,159 @@ const mainSection = document.createElement('section')
     inputReturn.setAttribute('type','date')
 
     inputBoxReturn.append(returnSpan,inputReturn)
+
+    const submitInput = document.createElement('input')
+    submitInput.setAttribute('type','submit')
+    submitInput.setAttribute('class','btn')
+
+    Form.append(submitInput)
+
+
+    /*******Ride SECTION*******************/
+
+    const rideSection = document.createElement('section')
+    rideSection.setAttribute('class','ride')
+    rideSection.setAttribute('id','ride')
+
+    document.body.append(rideSection)
+
+    const rideHeading = document.createElement('div')
+    rideHeading.setAttribute('class','heading')
+    rideSection.append(rideHeading)
+
+    const spanRideHeading = document.createElement('span')
+    spanRideHeading.textContent = 'How it Works'
+    const h1RideHeading = document.createElement('h1')
+    h1RideHeading.textContent = 'Rent With 3 Easy Steps'
+    rideHeading.append(spanRideHeading,h1RideHeading)
+
+    const rideContainer = document.createElement('div')
+    rideContainer.setAttribute('class','ride-container')
+    rideSection.append(rideContainer)
+
+    const divBox = document.createElement('div')
+    divBox.setAttribute('class','box')
+    rideContainer.append(divBox)
+
+    const bxIEl = document.createElement('i')
+    bxIEl.setAttribute('class','bx bxs-map')
+    const h2DivBox = document.createElement('h2')
+    h2DivBox.textContent= 'Choose a location'
+    const pDivBox = document.createElement('p')
+    pDivBox.textContent = 'Great Location'
+
+    divBox.append(bxIEl,h2DivBox,pDivBox)
+
+    const div2Box = document.createElement('div')
+    div2Box.setAttribute('class','box')
+    rideContainer.append(div2Box)
+
+    const bxI2El = document.createElement('i')
+    bxI2El.setAttribute('class','bx bxs-calendar-check')
+    const h2El2DivBox = document.createElement('h2')
+    h2El2DivBox.textContent = 'Pick-Up Date'
+    const p2DivBox = document.createElement('p')
+    p2DivBox.textContent = 'Great Pick up Date'
+    div2Box.append(bxI2El,h2El2DivBox,p2DivBox)
+
+    const div3Box = document.createElement('div')
+    div3Box.setAttribute('class','box')
+    rideContainer.append(div3Box)
+
+    const bxI3El = document.createElement('i')
+    bxI3El.setAttribute('class','bx bxs-calendar-star')
+    const h2El3DivBox = document.createElement('h2')
+    h2El3DivBox.textContent = 'Book a Car'
+    const p3DivBox = document.createElement('p')
+    p3DivBox.textContent = 'Great Car'
+
+    div3Box.append(bxI3El,h2El3DivBox,p3DivBox)
+
+
+
+
+
+
+    /******Services*************/
+
+const serviceSection = document.createElement('section')
+    serviceSection.setAttribute('class','services')
+    serviceSection.setAttribute('id','services')
+    document.body.append(serviceSection)
+
+    const servicesHeading = document.createElement('div')
+    servicesHeading.setAttribute('class','heading')
+    serviceSection.append(servicesHeading)
+
+    const spanServicesHeading = document.createElement('span')
+    spanServicesHeading.textContent = 'Best Services'
+    const h1ServicesHeading = document.createElement('h1')
+    h1ServicesHeading.textContent = 'Explore Out Top Deals'
+    servicesHeading.append(spanServicesHeading,h1ServicesHeading)
+
+    const servicesContainer = document.createElement('div')
+    servicesContainer.setAttribute('class','services-container')
+    serviceSection.append(servicesContainer)
+
+    const servicesBox = document.createElement('div')
+    servicesBox.setAttribute('class','box')
+    const boxImage = document.createElement('div')
+    boxImage.setAttribute('class','box-img')
+    const imageBox1 = document.createElement('img')
+    imageBox1.setAttribute('src','img/benz.jpg')
+    const pBox1 = document.createElement('p')
+    pBox1.textContent = '2019'
+    const h3Box1 = document.createElement('h3')
+    h3Box1.textContent = '2019 Mercedes-Benz A-Class'
+    const h2Box1 = document.createElement('h2')
+    h2Box1.textContent = '50$/day'
+    const aBox1 = document.createElement('a')
+    aBox1.setAttribute('href','#')
+    aBox1.setAttribute('class','btn')
+    aBox1.textContent = 'Rent Now'
+
+    servicesContainer.append(servicesBox)
+    servicesBox.append(boxImage,imageBox1,pBox1,h3Box1,h2Box1,aBox1)
+
+    const servicesBox2 = document.createElement('div')
+    servicesBox2.setAttribute('class','box')
+    const boxImage2 = document.createElement('div')
+    boxImage2.setAttribute('class','box-img')
+    const imageBox2 = document.createElement('img')
+    imageBox2.setAttribute('src','img/AUDI.jpg')
+    const pBox2 = document.createElement('p')
+    pBox2.textContent = '2018'
+    const h3Box2 = document.createElement('h3')
+    h3Box2.textContent = '2019 AUDI A4'
+    const h2Box2 = document.createElement('h2')
+    h2Box2.textContent = '50$/day'
+    const aBox2 = document.createElement('a')
+    aBox2.setAttribute('href','#')
+    aBox2.setAttribute('class','btn')
+    aBox2.textContent = 'Rent Now'
+
+    servicesContainer.append(servicesBox2)
+    servicesBox2.append(boxImage2,imageBox2,pBox2,h3Box2,h2Box2,aBox2)
+
+    const servicesBox3 = document.createElement('div')
+    servicesBox3.setAttribute('class','box')
+    const boxImage3 = document.createElement('div')
+    boxImage3.setAttribute('class','box-img')
+    const imageBox3 = document.createElement('img')
+    imageBox3.setAttribute('src','img/BMW.jpg')
+    const pBox3 = document.createElement('p')
+    pBox3.textContent = '2018'
+    const h3Box3 = document.createElement('h3')
+    h3Box3.textContent = '2019 BMW X5'
+    const h2Box3 = document.createElement('h2')
+    h2Box3.textContent = '50$/day'
+    const aBox3 = document.createElement('a')
+    aBox3.setAttribute('href','#')
+    aBox3.setAttribute('class','btn')
+    aBox3.textContent = 'Rent Now'
+
+    servicesContainer.append(servicesBox3)
+    servicesBox3.append(boxImage3,imageBox3,pBox3,h3Box3,h2Box3,aBox3)
 }
 
 
@@ -187,8 +341,6 @@ function render() {
 
 
 function init() {
-
-    fetchDataFromServer().then(carsData => state.cars = carsData)
     fetchDataFromServer().then(function (carsData) {
         state.cars = carsData
         render()
