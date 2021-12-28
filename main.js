@@ -324,12 +324,76 @@ const serviceSection = document.createElement('section')
 
     servicesContainer.append(servicesBox3)
     servicesBox3.append(boxImage3,imageBox3,pBox3,h3Box3,h2Box3,aBox3)
+
+    const aboutSection = document.createElement('section')
+    aboutSection.setAttribute('class','about')
+    aboutSection.setAttribute('id','about')
+    document.body.append(aboutSection)
+
+    const aboutHeading = document.createElement('div')
+    aboutHeading.setAttribute('class','heading')
+    const spanHeadingAbout = document.createElement('span')
+    spanHeadingAbout.textContent = 'About Us'
+    const h1AboutHeading = document.createElement('h1')
+    h1AboutHeading.textContent = 'Best Customer Experience'
+
+    aboutSection.append(aboutHeading)
+    aboutHeading.append(spanHeadingAbout,h1AboutHeading)
+
+    const aboutContainer = document.createElement('div')
+    aboutContainer.setAttribute('class','about-container')
+    const aboutImage = document.createElement('div')
+    aboutImage.setAttribute('class','about-img')
+    const imageAbout = document.createElement('img')
+    imageAbout.setAttribute('src','img/road-trip-feature.jpg')
+
+    const aboutText = document.createElement('div')
+    aboutText.setAttribute('class','about-text')
+    const spanText = document.createElement('span')
+    spanText.textContent = 'About Us'
+    const p1About = document.createElement('p')
+    p1About.textContent = 'Great Stuff'
+     const anchorAbout = document.createElement('a')
+    anchorAbout.setAttribute('class','btn')
+    anchorAbout.setAttribute('href','#')
+    anchorAbout.textContent = 'Learn More'
+
+    aboutSection.append(aboutContainer)
+    aboutContainer.append(aboutImage,aboutText)
+    aboutImage.append(imageAbout)
+    aboutText.append(spanText,p1About,anchorAbout)
+
+
+
 }
 
 
+
+
 function renderFooter(){
+const footer = document.createElement('section')
+    footer.setAttribute('class','newsletter')
+    document.body.append(footer)
 
+    const h2Footer = document.createElement('h2')
+    h2Footer.textContent = 'Subscribe to Newsletter'
 
+    const footerBox = document.createElement('div')
+    footerBox.setAttribute('class','box')
+
+    const labelFooter = document.createElement('label')
+
+    const inputFooter = document.createElement('input')
+    inputFooter.setAttribute('type','email')
+    inputFooter.setAttribute('placeholder','Enter Your Email...')
+
+const anchorFooter = document.createElement('a')
+    anchorFooter.setAttribute('class','btn')
+    anchorFooter.setAttribute('href','#')
+    anchorFooter.textContent = 'Subscribe'
+
+    footer.append(h2Footer,footerBox)
+    footerBox.append(labelFooter,inputFooter,anchorFooter)
 }
 function render() {
     document.body.innerHTML = ''
