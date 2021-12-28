@@ -36,6 +36,21 @@ function renderHeader(){
     const header = document.createElement('header')
     document.body.append(header)
 
+    const anchorLogo = document.createElement('a')
+    anchorLogo.setAttribute('class','logo')
+    anchorLogo.setAttribute('href','#')
+    const imageLogo = document.createElement('img')
+    imageLogo.setAttribute('src','https://upload.wikimedia.org/wikipedia/commons/6/65/Circle-icons-car.svg')
+    const divLogo = document.createElement('div')
+    divLogo.setAttribute('class','bx bx-menu')
+    divLogo.setAttribute('id','menu-icon')
+
+    header.append(anchorLogo,divLogo)
+    anchorLogo.append(imageLogo)
+
+
+
+
     const navBar = document.createElement('ul')
     navBar.setAttribute('class','navbar')
     header.append(navBar)
